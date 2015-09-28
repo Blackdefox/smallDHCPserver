@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn" name="MyApp" packages="">
+  <appenders>
+	<Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{ISO8601} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+	<File name="dhcp.DHCPProperties.log" fileName="logs/DHCPProperties.log" immediateFlush="true" append="true">
+      <PatternLayout pattern="%d{ISO8601} [%-5level] %class{36} %L %M - %msg%xEx%n"/>
+    </File>
+	<File name="dhcp.server.DHCPserver.log" fileName="logs/DHCPserver.log" immediateFlush="true" append="true">
+      <PatternLayout pattern="%d{ISO8601} [%-5level] %class{36} %L %M - %msg%xEx%n"/>
+    </File>
+	<File name="dhcp.server.DHCPlistener.log" fileName="logs/DHCPlistener.log" immediateFlush="true" append="true">
+      <PatternLayout pattern="%d{ISO8601} [%-5level] %class{36} %L %M - %msg%xEx%n"/>
+    </File>
+	<File name="dhcp.server.DHCPsender.log" fileName="logs/DHCPsender.log" immediateFlush="true" append="true">
+      <PatternLayout pattern="%d{ISO8601} [%-5level] %class{36} %L %M - %msg%xEx%n"/>
+    </File>
+	<File name="dhcp.packet.DHCPPacketHandler.log" fileName="logs/DHCPPacketHandler.log" immediateFlush="true" append="true">
+      <PatternLayout pattern="%d{ISO8601} [%-5level] %class{36} %L %M - %msg%xEx%n"/>
+    </File>
+	<File name="dhcp.simulator.DHCPClientSimulator.log" fileName="logs/DHCPClientSimulator.log" immediateFlush="true" append="true">
+      <PatternLayout pattern="%d{ISO8601} [%-5level] %class{36} %L %M - %msg%xEx%n"/>
+    </File>
+	<File name="ConsolThread.log" fileName="logs/ConsolThread.log" immediateFlush="true" append="true">
+      <PatternLayout pattern="%d{ISO8601} [%-5level] %class{36} %L %M - %msg%xEx%n"/>
+    </File>
+  </appenders>
+  <loggers>
+	<logger name="dhcp.DHCPProperties" level="trace" additivity="false">
+      <appender-ref ref="dhcp.DHCPProperties.log"/>
+    </logger>
+	<logger name="dhcp.server.DHCPserver" level="trace" additivity="false">
+      <appender-ref ref="dhcp.server.DHCPserver.log"/>
+    </logger>
+	<logger name="dhcp.server.DHCPlistener" level="trace" additivity="false">
+      <appender-ref ref="dhcp.server.DHCPlistener.log"/>
+    </logger>
+	<logger name="dhcp.server.DHCPsender" level="trace" additivity="false">
+      <appender-ref ref="dhcp.server.DHCPsender.log"/>
+    </logger>
+	<logger name="dhcp.packet.DHCPPacketHandler" level="trace" additivity="false">
+      <appender-ref ref="dhcp.packet.DHCPPacketHandler.log"/>
+    </logger>
+	<logger name="dhcp.simulator.DHCPClientSimulator" level="trace" additivity="false">
+      <appender-ref ref="dhcp.simulator.DHCPClientSimulator.log"/>
+    </logger>
+	<logger name="ConsolThread" level="trace" additivity="false">
+      <appender-ref ref="ConsolThread.log"/>
+    </logger>
+	<logger name="ConsolProtocol" level="trace" additivity="false">
+      <appender-ref ref="ConsolThread.log"/>
+    </logger>
+    <root level="error">
+      <appender-ref ref="Console"/>
+    </root>
+  </loggers>
+</configuration>

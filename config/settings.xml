@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<server>
+		<ip-address>192.168.1.1</ip-address>
+	</server>
+	<clients>
+		<client id="all">
+			<ip-range>
+				<start>192.168.1.100</start>
+				<end>192.168.1.110</end>
+				<subnetmask>255.255.255.0</subnetmask>
+			</ip-range>
+			<router>123.123.123.1</router>
+			<router>123.123.123.2</router>
+			<router>123.123.123.3</router>
+			<nameserver>123.123.123.4</nameserver>
+			<nameserver>123.123.123.5</nameserver>
+			<nameserver>123.123.123.6</nameserver>
+			<leasetime>60</leasetime>
+			<renewaltime>30</renewaltime>
+			<rebindingtime>30</rebindingtime>
+			<domainname>small.dhcp.server</domainname>
+			<broadcast>192.168.1.255</broadcast>
+			<ntp-server>192.168.1.1</ntp-server>
+		</client>
+	</clients>
+</settings>
+
